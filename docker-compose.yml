@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  polkadot-node:
+    container_name: polkadot-overview-polkadot-node
+    image: parity/polkadot:latest
+#    volumes:
+#      - '.docker-volumes/polkadot-node:/polkadot/.local/share/polkadot'
+    ports:
+      - '30333:30333'
+      - '9933:9933'
+      - '9944:9944'
+    command: --chain polkadot --pruning archive --wasm-execution Compiled --unsafe-ws-external --rpc-cors all
+  mongo:
+    container_name: polkadot-overview-mongo
+    image: mongo
+#    volumes:
+#      - '.docker-volumes/mongo:/data/db'
+    ports:
+    - "27017:27017"
+  polkadot-overview-app:
+    container_name: polkadot-overview-app
+    image: polkadot-overview-app:latest
+    build: .
+    volumes:
+      - .:/usr/src/polkadot-overview
+      - /usr/src/polkadot-overview/node_modules
+      - /usr/src/polkadot-overview/api/node_modules
+      - /usr/src/polkadot-overview/parser-light/node_modules
+      - /usr/src/polkadot-overview/ui/node_modules
+    ports:
+      - "3001:3001"
+      - "4000:4000"

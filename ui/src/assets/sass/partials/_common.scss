@@ -1,0 +1,140 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #20232c;
+  color: #d5d5d5;
+  font-size: 18px;
+  min-width: 336px;
+  min-height: 100%;
+  position: relative;
+  padding: 0 0 55px 0;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  *::selection {
+    background: #3b3d55;
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: #fff;
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(158, 208, 227, 0.5);
+    color: #9ed0e3;
+
+    &:hover {
+      color: #90d1ea;
+      border-bottom: 1px solid rgba(158, 208, 227, 0.75);
+    }
+  }
+
+  p {
+    line-height: 1.35em;
+    margin: 0 0 2em 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 0 20px 30px;
+      padding: 0 0 0 2px;
+    }
+  }
+  .loadingMessage {
+    text-align: center;
+    padding: 20px 0;
+
+    span {
+      display: block;
+      margin: 12px 0 0;
+      font-size: 0.8em;
+      color: #a4c3d5;
+    };
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px 6px;
+
+    @include xl {
+      padding: 10px 15px;
+    }
+
+    @include xxl {
+      width: 1440px;
+      margin: 0 auto;
+    }
+  }
+
+  .outOfSyncMessage {
+    margin: 10px 0 0;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #fbfad0;
+    text-align: center;
+    color: #fdffb5;
+    font-size: 0.8em;
+  }
+
+  // Text modifications
+  .pale {
+    opacity: 0.5;
+  }
+  .increasedLetterSpacing {
+    letter-spacing: 0.05em;
+  }
+
+  // Sections
+  .section {
+
+    &.header {
+      font-size: 16px;
+      background: #1D1F29;
+      border-bottom: 1px solid #363c4d;
+    }
+
+    &.candidatesOverview {
+      padding: 10px 0 15px;
+    }
+
+    &.profile {
+      padding: 5px 0 15px;
+    }
+
+    &.footer {
+      background: #1D1F29;
+      border-top: 1px solid #363c4d;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  // Loading message
+  .loadingBlock {
+    text-align: center;
+    font-size: 1.5em;
+    color: #42406c;
+
+    svg path,
+    svg rect{
+      fill: #595690;
+    }
+  }
+}

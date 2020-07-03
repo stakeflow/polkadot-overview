@@ -1,0 +1,6 @@
+.docker-volumes
+node_modules
+api/node_modules
+parser-light/node_modules
+ui/node_modules
+npm-debug.log

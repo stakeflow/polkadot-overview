@@ -1,0 +1,97 @@
+header {
+
+  .container {
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      flex-direction: column;
+
+      @include md {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .logoBlock {
+    margin: 0 auto;
+
+    @include md {
+      margin: 0;
+    }
+
+    .logoImgLink {
+      float: left;
+      border: none;
+
+      img {
+        height: 30px;
+        margin: 0 10px 0 0;
+      }
+    }
+
+    .logoText {
+      font-size: 1.5em;
+      font-weight: 300;
+      color: #fff;
+      border: none;
+      margin: 0;
+      letter-spacing: 0.05em;
+
+      &:hover {
+        color: #fff;
+        border: none;
+      }
+    }
+
+    .createdByText {
+      display: block;
+      font-size: 0.7em;
+      letter-spacing: 0.22em;
+    }
+  }
+
+  .navigation {
+    text-align: center;
+
+    li {
+      list-style: none;
+      margin: 10px 0 0;
+
+      @include sm {
+        display: inline-block;
+        margin: 0 0.4em;
+      }
+
+      @include md {
+        float: left;
+        margin: 0 0 0 1.4em;
+      }
+
+      &.subscribeMessage {
+        padding: 4px 0;
+
+        i {
+          margin: 0;
+        }
+      }
+
+      a {
+        color: #d3eaff;
+        font-size: 0.85em;
+        text-transform: uppercase;
+        border: none;
+
+        &:hover {
+          color: #fff;
+        }
+
+        &.announcementChannel {
+          margin: 0 0 0 4px;
+        }
+
+      }
+    }
+  }
+}

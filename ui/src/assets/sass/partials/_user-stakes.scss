@@ -1,0 +1,181 @@
+.personalizeDataBlock {
+  position: relative;
+  padding: 15px 20px 20px;
+  margin: 10px 0 14px;
+  background: #2c3142;
+  border-radius: 5px;
+  font-size: 16px;
+
+  transition: opacity 0.25s ease-out 0.2s, background 0.25s ease-out;
+
+  @include lg {
+    margin: 10px 0 35px;
+  }
+
+  .userStakesTitle {
+    color: #fff;
+    margin: 0 0 1.5em;
+    font-size: 0.9em;
+    padding: 0 80px 0 0;
+  }
+
+  &.hidden {
+    padding: 15px 20px;
+    opacity: 0.5;
+    background: #2c3142;
+    border-radius: 5px;
+
+    .userStakesTitle {
+      margin: 0;
+    }
+
+    .personalizeDataBlockClose {
+      top: 18px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .personalizeDataBlockClose {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+
+  .addressesList {
+    font-family: 'PT Mono', monospace;
+    margin: 20px 0 16px;
+    overflow: hidden;
+
+    .addressesListItem {
+      box-sizing: border-box;
+      position: relative;
+      font-size: 0.85em;
+      background: #3c4054;
+      padding: 7px 10px;
+      margin: 0 0 10px 0;
+      border-radius: 5px;
+
+      @include lg {
+        margin: 0 1% 10px 0;
+        width: 49%;
+        float: left;
+
+        &:nth-child(2) {
+          margin: 0 0 10px 1%;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.9em;
+        padding: 3px 5px;
+        position: relative;
+        top: 2px;
+      }
+
+      span.toggleMyDelegatorAddressStatus {
+        position: absolute;
+        top: -1px;
+        right: 40px;
+        border-radius: 10px;
+        background: #595959;
+        padding: 2px 4px 3px;
+        font-size: 0.85em;
+        cursor: pointer;
+        width: 30px;
+        color: #aeaeae;
+        opacity: 0.7;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        .svg-inline--fa {
+          position: relative;
+          top: 1px;
+          left: 0;
+          margin: 0;
+        }
+
+        &.enabled {
+          background: #5a7b5f;
+          color: #fff;
+
+          .svg-inline--fa {
+            left: 10px;
+          }
+        }
+      }
+
+      a {
+        border: none;
+        color: #ff775e;
+        background: #864a3e;
+        padding: 2px 10px;
+        float: right;
+        border-radius: 4px;
+        font-size: 0.85em;
+        opacity: 0.75;
+        position: relative;
+        top: -3px;
+
+        .svg-inline--fa {
+          margin: 0;
+        }
+
+        &:hover {
+          color: #ff4400;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .personalizeDataForm {
+    display: flex;
+    width: 100%;
+
+    input {
+      border: 2px solid #fff;
+      background: #e2dfff;
+      border-right: none;
+      width: 70%;
+      font-size: 0.85em;
+      border-radius: 3px 0 0 3px;
+      color: #363636;
+      padding: 10px;
+
+      @include md {
+        width: 85%;
+      }
+    }
+
+    button {
+      border: 2px solid #fff;
+      border-radius: 0 3px 3px 0;
+      color: #fff;
+      width: 30%;
+      background: #262a35;;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      opacity: 0.85;
+
+      &:hover {
+        opacity: 1;
+        background: #3a4050;;
+      }
+
+      @include md {
+        width: 15%;
+      }
+    }
+  }
+}

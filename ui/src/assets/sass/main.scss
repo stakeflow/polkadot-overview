@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic');
+
+@import "partials/breakpoints";
+@import "partials/common";
+@import "partials/header";
+@import "partials/node-status";
+@import "partials/user-stakes";
+@import "partials/network-data";
+@import "partials/validators-overview";
+@import "partials/node-profile";
+
+.footer {
+  padding: 7px 0;
+  
+  p {
+    text-align: right;
+    color: #d4d4d4;
+    font-size: 0.85em;
+    margin: 0;
+  }
+}
+
+// Charts styles overwrite
+.chart-container .axis, .chart-container .chart-label {
+  fill: #fff !important;
+}
+
+.chart-container .axis line, .chart-container .chart-label line {
+  stroke: rgb(64, 74, 98) !important;
+}
+
+.graph-svg-tip.comparison ul {
+  padding: 0 10px 10px;
+
+  li {
+    margin: 0;
+    padding: 5px 0 0;
+  }
+}

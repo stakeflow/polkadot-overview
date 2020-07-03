@@ -1,0 +1,69 @@
+.networkData {
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin: 0 0 14px;
+  border-radius: 5px;
+
+  @include md {
+    overflow: hidden;
+    white-space: normal;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 24px;
+  }
+
+  .networkDataItem {
+    width: 46%;
+    display: inline-block;
+    margin: 0 1% 0 0;
+    padding: 20px 10px;
+    background: #262a35;
+    text-align: center;
+
+    @include md {
+      width: 100%;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+
+    .title {
+      margin: 0 0 5px;
+      color: #8792aa;
+      font-size: 0.75em;
+    }
+
+    .data {
+      margin: 0;
+      color: #e1e2b1;
+      font-size: 0.75em;
+
+      @include md {
+        font-size: 1em;
+      }
+    }
+
+    &.validatorsNumber {
+      //background: #A6C6D2;
+    }
+
+    &.candidatesNumber {
+      //background: #7C9EB8;
+    }
+
+    &.latestBlock {
+      //background: #577F99;
+    }
+
+    &.session {
+      //background: #24516D;
+    }
+
+    &.era {
+      //background: #063855;
+    }
+  }
+}

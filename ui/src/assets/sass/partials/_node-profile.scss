@@ -1,0 +1,255 @@
+.nodeProfile {
+  padding: 20px 0;
+
+  .nodeName {
+    display: flex;
+    margin: 0 0 24px;
+
+    .nodeIcon {
+      position: relative;
+      margin: 0 10px 0 0;
+      width: 32px;
+      height: 32px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1em;
+      position: relative;
+      top: 5px;
+
+      @include lg {
+        font-size: 1.75em;
+        top: 0;
+      }
+    }
+  }
+
+  .profileLayout {
+    display: flex;
+    flex-direction: column;
+
+    @include lg {
+      flex-direction: row;
+    }
+
+    .left {
+      font-size: 0.9em;
+      margin: 0;
+      flex-grow: 1;
+
+      @include lg {
+        margin: 0 24px 0 0;
+      }
+
+      .nodeParametersTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 0 40px;
+
+        tr {
+          border: 1px solid #2e313e;
+
+          td {
+            padding: 14px 16px;
+            font-size: 0.9em;
+
+            &:first-child {
+              background: #25272f;
+              width: 200px;
+            }
+
+            &.nominatorName {
+              width: auto;
+
+              .nodeIcon {
+                float: left;
+              }
+              p {
+                line-height: 24px;
+                margin: 0 0 0 42px;
+              }
+            }
+
+            &.nominatorsData {
+              display: flex;
+              justify-content: space-between;
+
+              .showNominatorsButton {
+                padding: 7px 14px;
+                border: none;
+                color: #a0a0a0;
+                background: #2e303e;
+                border-radius: 3px;
+                opacity: 0.75;
+
+                &:hover {
+                  opacity: 1;
+                }
+
+                i {
+                  margin: 0 5px 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .chartBlock {
+        background: #191d27;
+        padding: 10px;
+        border-radius: 7px;
+        margin: 0 0 34px;
+      }
+    }
+
+    .right {
+      width: 100%;
+
+      @include lg {
+        width: 24%;
+      }
+    }
+
+    .block {
+        margin: 0 0 32px;
+
+        h3 {
+          color: #e2e2e2;
+          font-size: 18px;
+          letter-spacing: 0.07em;
+          font-weight: normal;
+          padding: 7px 0;
+          margin: 0 0 6px;
+        }
+
+        &.points {
+
+          .echarts {
+            width: 100%;
+          }
+        }
+
+        &.stake {
+          
+        }
+
+        &.session {
+
+          ul.stability {
+            width: 100%;
+            overflow: hidden;
+
+            li {
+              width: 100%;
+              margin: 0 0 10px;
+              background: #262933;
+              overflow: hidden;
+              padding: 10px;
+              position: relative;
+
+              .stabilityItem {
+                margin: 0;
+                position: relative;
+
+                .svg-inline--fa {
+                  opacity: 0.75;
+                  font-size: 0.9em;
+                }
+
+                span {
+                  font-size: 0.8em;
+                  position: absolute;
+                  left: 25px;
+                }
+
+                &.nextSessionElected {
+
+                  .svg-inline--fa {
+                    color: #5199FF;
+                  }
+                }
+
+                &.authoredBlocks {
+
+                  .svg-inline--fa {
+                    color: #41B619;
+                  }
+                }
+
+                &.heartbeats {
+
+                  .svg-inline--fa {
+                    color: tomato;
+                  }
+                }
+
+                &.downTimeSlashCounter84Eras {
+
+                  .svg-inline--fa {
+                    color: #ffaf00;
+                    position: relative;
+                    left: 2px;
+                  }
+                }
+
+                &.off {
+
+                  .svg-inline--fa {
+                    color: #898080;
+                    opacity: 0.25;
+                  }
+
+                  &.downTimeSlashCounter84Eras {
+
+                    .svg-inline--fa {
+                      position: relative;
+                      left: 2px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.identity {
+
+          ul {
+            list-style: none;
+
+            li {
+              margin: 0 0 7px;
+              padding: 10px;
+              border-radius: 4px;
+              background: #262933;
+
+              p {
+                margin: 0;
+                color: #bfbfbf;
+                font-size: 0.9em;
+
+                &.identityName {
+                  font-size: 0.8em;
+                  margin: 0 0 3px;
+                  color: #ececec;
+
+                  i {
+                    margin: 0 3px 0 0;
+                  }
+                }
+              }
+
+              a {
+                display: inline-block;
+                margin: 0 0 4px;
+                color: #b0dfe4;
+                font-size: 0.9em;
+              }
+            }
+          }
+        }
+      }
+  }
+}
