@@ -75,6 +75,28 @@ docker-compose up
 
 *You can see the application running by visiting http://127.0.0.1:3001 url in your browser*
 
+### How to update the app to the latest version
+
+##### Step 1: Pull the latest code from this repository
+```
+git pull
+```
+
+##### Step 2: Remove old docker data
+```
+docker-compose rm -v -f
+```
+
+##### Step 3: Get latest containers from Docker Hub
+```
+docker-compose pull
+```
+
+##### Step 4: Rebuild and start the new version
+```
+docker-compose up --build
+```
+
 
 ### Manual installation
 
@@ -141,3 +163,23 @@ VUE_APP_API_PORT | 4000 | Polkadot Overview app API port
 npm run dev
 ```
 *You can see the application running by visiting http://127.0.0.1:3001 url in your browser*
+
+### How to update the app to the latest version
+
+##### Step 1: Pull the latest code from this repository
+```
+git pull
+```
+
+##### Step 2: Update dependencies
+```
+npm ci
+cd parser-light && npm ci
+cd ../api && npm ci
+cd ../ui && npm ci && cd ..
+```
+
+##### Step 3: Start the app
+```
+npm run dev
+```
