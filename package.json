@@ -1,6 +1,6 @@
 {
   "name": "polkadot-overview",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Validators explorer for Polkadot Network",
   "author": "genesis-lab-team",
   "license": "Apache-2.0",
@@ -12,7 +12,7 @@
     "start:parser-light-dev": "cd parser-light && npm run watch",
     "start:parser-light-production": "cd parser-light && npm run start",
     "start:ui-dev": "cd ui && npm run serve",
-    "start:ui-production": "cd ui && npm run build"
+    "start:ui-production": "cd ui && npm run serve:production"
   },
   "devDependencies": {
     "concurrently": "^5.2.0"
