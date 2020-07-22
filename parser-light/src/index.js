@@ -368,13 +368,14 @@ function updateNodesIdentities() {
 
         node.info = new Map();
         if (!identity['isEmpty']) {
-          for await (let [identityKey, identityValue] of identity._raw.info) {
-            if (!identityValue['isEmpty']) {
-              node.info.set(identityKey, identityValue._raw.toString());
+          let identityInfo = identity.toJSON().info;
+          for await (let identityKey of Object.keys(identityInfo)) {
+            if (identityInfo[identityKey] !== null && identityInfo[identityKey].Raw !== undefined) {
+              node.info.set(identityKey, identityInfo[identityKey].Raw);
 
               // Save node icon
               if (identityKey === 'image') {
-                let url = hexToString(identityValue._raw.toString());
+                let url = hexToString(identityInfo[identityKey].Raw);
 
                 await axios.get(url, {
                   responseType: 'arraybuffer'
