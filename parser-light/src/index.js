@@ -245,6 +245,14 @@ function updateNodesData(eraIndex, sessionIndex) {
               node = await db.collection('validators').insertOne(node).then(res => res.ops[0]);
             }
 
+            // Temporary fix to correct the old DB structure issue
+            if (node.historicalData.points === undefined || node.historicalData.slashes === undefined) {
+              node.historicalData = {
+                points: [],
+                slashes: []
+              }
+            }
+
             // Get account exposure for node
             let exposure = accountsInfo[i].exposure.toJSON();
 
