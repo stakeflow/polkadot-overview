@@ -4,7 +4,7 @@ import _ from 'lodash';
 export default {
   install: () => {
     Vue.prototype.$h = {
-      convert: (pip) => _.round(pip / 1000000000000, 12),
+      convert: (pip) => _.round(pip / 10000000000, 10),
 
       formatNumber: (number, precision = 18) => {
         const result = _.round(number, precision).toString().split('.');
