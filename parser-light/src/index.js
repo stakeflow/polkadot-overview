@@ -324,6 +324,9 @@ function updateNodesData(eraIndex, sessionIndex) {
               });
             }
 
+            // Update commission
+            node.commission = accountsInfo[i].validatorPrefs.commission.toNumber() / 10000000;
+
             await db.collection('validators').updateOne({ "_id": node._id }, { "$set": node });
           });
         }
