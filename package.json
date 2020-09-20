@@ -5,7 +5,7 @@
   "author": "genesis-lab-team",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "concurrently \"npm run start:api-dev\" \"npm run start:parser-light-dev\" \"npm run start:ui-dev\"",
+    "development": "concurrently \"npm run start:api-dev\" \"npm run start:parser-light-dev\" \"npm run start:ui-dev\"",
     "production": "concurrently \"npm run start:api-production\" \"npm run start:parser-light-production\" \"npm run start:ui-production\"",
     "start:api-dev": "cd api && npm run watch",
     "start:api-production": "cd api && npm run start",
