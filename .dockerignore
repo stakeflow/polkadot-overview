@@ -1,4 +1,5 @@
-.docker-volumes
+.chain-data
+.mongo-data
 node_modules
 api/node_modules
 parser-light/node_modules

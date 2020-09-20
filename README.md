@@ -45,7 +45,7 @@ cd ../ui && cp .env.example.docker .env && cd ..
 Variable | Default value | Description
  ------ | ------ | ------
 WSNODE | ws://polkadot-node:9944/ | Polkadot node RPC endpoint
-APP_API_PORT | 4000 | Polkadot Overview app API port
+APP_API_PORT | 4001 | Polkadot Overview app API port
 DB_NAME | polkadot-overview | Database name
 DB_LOCATION | localhost | MongoDB host
 DB_PORT | 27017 | MongoDB port
@@ -54,7 +54,7 @@ DB_PORT | 27017 | MongoDB port
 `api/.env`
 Variable | Default value | Description
  ------ | ------ | ------
-APP_API_PORT | 4000 | Polkadot Overview app API port
+APP_API_PORT | 4001 | Polkadot Overview app API port
 DB_NAME | polkadot-overview | Database name
 DB_LOCATION | localhost | MongoDB host
 DB_PORT | 27017 | MongoDB port
@@ -63,7 +63,7 @@ DB_PORT | 27017 | MongoDB port
 `ui/.env`
 Variable | Default value | Description
  ------ | ------ | ------
-VUE_APP_API_PORT | 4000 | Polkadot Overview app API port
+VUE_APP_API_PORT | 4001 | Polkadot Overview app API port
 </details>
 
 ##### Step 3: Start the application with docker-compose
@@ -84,7 +84,7 @@ git pull
 
 ##### Step 2: Remove old docker data
 ```
-docker-compose rm -v -f
+docker-compose down
 ```
 
 ##### Step 3: Get latest containers from Docker Hub
@@ -137,7 +137,7 @@ cd ../ui && cp .env.example .env && cd ..
 Variable | Default value | Description
  ------ | ------ | ------
 WSNODE | ws://localhost:9944/ | Polkadot node RPC endpoint
-APP_API_PORT | 4000 | Polkadot Overview app API port
+APP_API_PORT | 4001 | Polkadot Overview app API port
 DB_NAME | polkadot-overview | Database name
 DB_LOCATION | localhost | MongoDB host
 DB_PORT | 27017 | MongoDB port
@@ -146,7 +146,7 @@ DB_PORT | 27017 | MongoDB port
 `api/.env`
 Variable | Default value | Description
  ------ | ------ | ------
-APP_API_PORT | 4000 | Polkadot Overview app API port
+APP_API_PORT | 4001 | Polkadot Overview app API port
 DB_NAME | polkadot-overview | Database name
 DB_LOCATION | localhost | MongoDB host
 DB_PORT | 27017 | MongoDB port
@@ -155,12 +155,12 @@ DB_PORT | 27017 | MongoDB port
 `ui/.env`
 Variable | Default value | Description
  ------ | ------ | ------
-VUE_APP_API_PORT | 4000 | Polkadot Overview app API port
+VUE_APP_API_PORT | 4001 | Polkadot Overview app API port
 </details>
 
 ##### Step 4: Start the application in development mode
 ```
-npm run dev
+npm run development
 ```
 *You can see the application running by visiting http://127.0.0.1:3001 url in your browser*
 
@@ -181,5 +181,8 @@ cd ../ui && npm ci && cd ..
 
 ##### Step 3: Start the app
 ```
-npm run dev
+npm run development
 ```
+
+### Ready to deploy on production?
+Add `-f docker-compose.production.yml` to every docker-compose command

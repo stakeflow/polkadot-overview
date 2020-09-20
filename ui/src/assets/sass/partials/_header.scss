@@ -1,97 +1,59 @@
 header {
+  background: #272A38;
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.2);
 
   .container {
-
-    .wrapper {
-      display: flex;
-      justify-content: space-between;
-      padding: 5px 0;
-      flex-direction: column;
-
-      @include md {
-        flex-direction: row;
-      }
-    }
-  }
-
-  .logoBlock {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
 
     @include md {
-      margin: 0;
-    }
-
-    .logoImgLink {
-      float: left;
-      border: none;
-
-      img {
-        height: 30px;
-        margin: 0 10px 0 0;
-      }
-    }
-
-    .logoText {
-      font-size: 1.5em;
-      font-weight: 300;
-      color: #fff;
-      border: none;
-      margin: 0;
-      letter-spacing: 0.05em;
-
-      &:hover {
-        color: #fff;
-        border: none;
-      }
-    }
-
-    .createdByText {
-      display: block;
-      font-size: 0.7em;
-      letter-spacing: 0.22em;
+      flex-direction: row;
     }
   }
 
-  .navigation {
-    text-align: center;
+  .logo {
+    display: flex;
 
-    li {
-      list-style: none;
-      margin: 10px 0 0;
+    a {
+      text-decoration: none;
+      color: #d7d7d7;
+      border: none;
+    }
 
-      @include sm {
-        display: inline-block;
-        margin: 0 0.4em;
-      }
+    &__text {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 5px 0 14px 0;
 
       @include md {
-        float: left;
-        margin: 0 0 0 1.4em;
+        margin: 5px 0 0 0;
       }
 
-      &.subscribeMessage {
-        padding: 4px 0;
-
-        i {
-          margin: 0;
-        }
+      &--network_color {
+        color: #e6007a;
       }
+    }
+  }
 
-      a {
-        color: #d3eaff;
-        font-size: 0.85em;
-        text-transform: uppercase;
-        border: none;
+  .nominateMessage {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+    padding: 4px 12px;
+    background: #e6007a;
+    border-radius: 3px;
 
-        &:hover {
-          color: #fff;
-        }
+    svg {
+      color: #fff;
+      margin: 0 4px 0 0;
+    }
 
-        &.announcementChannel {
-          margin: 0 0 0 4px;
-        }
-
-      }
+    a {
+      color: #fff;
+      border-color: #fff;
     }
   }
 }

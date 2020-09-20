@@ -1,14 +1,10 @@
 <template>
-  <header class="section header">
+  <header>
     <div class="container">
-      <div class="wrapper">
-        <div class="logoBlock">
-          <router-link to="/" class="logoText">Polkadot Overview</router-link>
-        </div>
-        <ul class="navigation">
-          <li class="subscribeMessage">Subscribe to our <a href="https://twitter.com/genesislab_net" target="_blank" class="announcementChannel"><i class="fab fa-twitter"></i> Twitter</a></li>
-        </ul>
+      <div class="logo">
+        <router-link to="/" class="logo__text"><span class="logo__text--network_color">Polkadot</span> Overview</router-link>
       </div>
+      <p class="nominateMessage"><i class="fas fa-heart"></i> Like the app? You can support us by setting <router-link to="/validators/13K6QTYBPMUFTbhZzqToKcfCiWbt4wDPHr3rUPyUessiPR61">Genesis Lab</router-link> as a target for your nomination.</p>
     </div>
   </header>
 </template>
