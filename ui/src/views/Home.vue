@@ -19,12 +19,13 @@ import NodesList from '../components/NodesList.vue';
 
 export default {
 
-  metaInfo: {
-    title: 'Polkadot Overview',
-    htmlAttrs: {
-      lang: 'en',
-      amp: true
-    }
+  metaInfo() {
+    return {
+      title: 'Polkadot Overview – Validators Explorer for Polkadot Network',
+      htmlAttrs: {
+        lang: 'en'
+      }
+    };
   },
 
   components: {
