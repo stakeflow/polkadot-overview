@@ -204,6 +204,15 @@ import PointsChart from '../components/charts/PointsChart.vue';
 
 export default {
 
+  metaInfo() {
+    return {
+      title: (this.node !== null) ? `Polkadot Overview | ${(this.node.info !== undefined && this.node.info.display !== undefined) ? hexToString(this.node.info.display) : this.node.stashAddress} Profile` : '~',
+      htmlAttrs: {
+        lang: 'en'
+      }
+    };
+  },
+
   components: {
     Identicon,
     UserAddresses,
@@ -223,6 +232,7 @@ export default {
       node: 'nodes/node',
       userStakes: 'user/userStakes'
     }),
+
     nodeIdentityBlockData() {
       const data = {};
       if (this.node !== null) {

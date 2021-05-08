@@ -6,17 +6,19 @@ import '@fortawesome/fontawesome-free/js/all';
 
 import { sync } from 'vuex-router-sync';
 import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
-import store from './store';
+import VueMeta from 'vue-meta';
 import $h from './plugins/helper';
 import $api from './plugins/axios';
+import router from './router';
+import store from './store';
+import App from './App.vue';
 
 // Sync router and store
 sync(store, router);
 
 Vue.use($h);
 Vue.use($api);
+Vue.use(VueMeta);
 
 Vue.config.productionTip = false;
 
